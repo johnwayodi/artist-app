@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "f633e611-dc46-4c06-b367-fbf774d4b1bc"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -70,6 +73,10 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "musicdb-app:build",
+            "proxyConfig": "src/proxy.conf.json"
+          },
           "configurations": {
             "production": {
               "browserTarget": "musicdb-app:build:production"

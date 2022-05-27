@@ -1,0 +1,32 @@
+@use "@angular/material" as mat;
+@import "../../../styles/global.scss";
+
+.nav-bar {
+  height: 80px;
+  width: 100%;
+  vertical-align: middle;
+  display: flex;
+  padding: 0;
+  @include mat.elevation(6);
+}
+
+.logo {
+  margin: 32px 0 0 32px;
+  font-size: 32px;
+  width: 200px;
+  cursor: pointer;
+
+  @include respond-to(handhelds) {
+    font-size: 20px;
+    width: fit-content;
+    margin: 32px 16px 0 8px;
+  }
+}
+
+.space-nav {
+  width: 20%;
+
+  @include respond-to(handhelds) {
+    width: 0;
+  }
+}

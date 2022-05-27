@@ -1,0 +1,22 @@
+<div class="section">
+  <p class="artists-title">Artists</p>
+  <div class="content">
+    <mat-card
+      class="card-item"
+      *ngFor="let artist of artists; index as i; first as isFirst"
+      (click)="openArtistDetails(artist.id)"
+    >
+      <img
+        class="card-image"
+        src="{{ artist.picture_big }}"
+        alt="Photo of {{ artist.name | ucwords }}"
+      />
+      <mat-card-content class="card-content">
+        <p style="font-size: 20px; font-weight: 500">
+          {{ artist.name | ucwords }}
+        </p>
+        <p>Fans: {{ artist.nb_fan | number }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

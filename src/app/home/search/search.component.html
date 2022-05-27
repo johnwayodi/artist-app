@@ -1,0 +1,23 @@
+<mat-form-field class="search-input" appearance="outline">
+  <input
+    matInput
+    aria-label="State"
+    [matAutocomplete]="auto"
+    placeholder="Search Artist by Name"
+    [formControl]="stateCtrl"
+  />
+  <mat-autocomplete
+    #auto="matAutocomplete"
+    (optionSelected)="openArtistDetails($event)"
+  >
+    <mat-option *ngFor="let user of artists" value="{{ user.name }}">
+      <img
+        class="example-option-img"
+        aria-hidden
+        src="{{ user.picture_small }}"
+        height="25"
+      />
+      <span>{{ user.name }}</span>
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field>
