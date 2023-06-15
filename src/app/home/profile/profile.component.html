@@ -66,7 +66,7 @@
         </mat-card-content>
       </mat-card>
     </mat-card>
-    <p class="title">Albums</p>
+    <p class="title">Albums ({{ profile && profile.nb_album }})</p>
 
     <div class="album-section">
       <div *ngFor="let album of albums; index as i" class="card-item">

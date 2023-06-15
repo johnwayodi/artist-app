@@ -7,7 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Screenshots
 
-![Screenshot 2023-06-15 at 22 07 09](https://github.com/johnwayodi/artist-app/assets/10683903/3ac32045-6874-4e6f-9066-4456442f30ed)
+![Screenshot 2023-06-15 at 23 18 10](https://github.com/johnwayodi/artist-app/assets/10683903/aa35d8dc-1476-406d-a7aa-b89fb624dd83)
 
 ![Screenshot 2023-06-15 at 22 09 30](https://github.com/johnwayodi/artist-app/assets/10683903/01563bfa-f89e-4c54-8c2c-4dc0b6e0f8ef)
 
