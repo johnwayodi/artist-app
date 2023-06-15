@@ -9,7 +9,7 @@
         <p class="artist-title">
           {{ artist.name | ucwords }}
         </p>
-        <p class="fan-count">Fans: {{ artist.nb_fan | number }}</p>
+        <p class="fan-count"><fa-icon [icon]="['fas', 'users']"></fa-icon> {{ artist.nb_fan | number }} Fans</p>
       </mat-card-content>
     </mat-card>
   </div>

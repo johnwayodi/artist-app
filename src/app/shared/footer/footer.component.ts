@@ -1,5 +1,5 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
-import { Router } from '@angular/router';
+import { getYear } from 'date-fns'
 
 @Component({
   selector: 'app-footer',
@@ -8,8 +8,9 @@ import { Router } from '@angular/router';
 })
 export class FooterComponent implements OnInit {
   disableHref: boolean = false;
+  currentYear: number = getYear(new Date())
 
-  constructor(private router: Router) {}
+  constructor() {}
 
   ngOnInit(): void {}
 }

@@ -4,7 +4,7 @@
       <div class="artist-data">
         <div class="artist-name">{{ profile && profile.name }}</div>
         <div class="artist-fan-count">
-          {{ profile && profile.nb_fan | number }} Fans
+          <fa-icon [icon]="['fas', 'users']"></fa-icon> {{ profile && profile.nb_fan | number }} Fans
         </div>
       </div>
       <mat-card class="artist-profile">
@@ -44,7 +44,7 @@
     <div class="artist-data">
       <div class="artist-name">{{ profile && profile.name }}</div>
       <div class="artist-fan-count">
-        {{ profile && profile.nb_fan | number }} Fans
+        <fa-icon [icon]="['fas', 'users']"></fa-icon> {{ profile && profile.nb_fan | number }} Fans
       </div>
     </div>
     <mat-card class="artist-info">

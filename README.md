@@ -1,4 +1,4 @@
-# [🔗 Artista](https://artist-app-opal.vercel.app/)
+# <a href="https://artist-app-johnwayodi.vercel.app/" target="_blank">🔗 Artista</a>
 Get information about Artists
 
 Information fetched from the [Deezer API](https://api.deezer.com)

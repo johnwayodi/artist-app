@@ -8,36 +8,13 @@ import {
   FaIconLibrary,
 } from '@fortawesome/angular-fontawesome';
 import {
-  faMapMarkerAlt,
-  faHome,
-  faUserPlus,
-  faWifi,
-  faBars,
-  faUserAlt,
-  faSignInAlt,
-  faLaptop,
-  faLock,
-  faTasks,
-  faAngleDoubleUp,
-  faFax,
-  faEnvelope,
-  faPhoneAlt,
-  faLink,
-  faKey,
-  faReceipt,
-  faGlobe,
-  faExclamation,
-  faAngleRight,
-  faCaretRight,
-  faInfoCircle,
-  faQuestionCircle,
   faMusic,
+  faCopyright,
+  faPalette,
+  faUsers,
 } from '@fortawesome/free-solid-svg-icons';
-import { faUserCircle } from '@fortawesome/free-regular-svg-icons';
 import {
-  faTwitter,
-  faLinkedinIn,
-  faInstagram,
+  faGithub,
 } from '@fortawesome/free-brands-svg-icons';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -90,34 +67,11 @@ export class SharedModule {
   constructor(library: FaIconLibrary) {
     // Add an icon to the library for convenient access in other components
     library.addIcons(
-      faMapMarkerAlt,
-      faHome,
-      faUserPlus,
-      faWifi,
-      faTwitter,
-      faLinkedinIn,
-      faEnvelope,
-      faBars,
-      faUserAlt,
-      faSignInAlt,
-      faLaptop,
-      faUserCircle,
-      faLock,
-      faTasks,
-      faAngleDoubleUp,
-      faFax,
-      faPhoneAlt,
-      faLink,
-      faKey,
-      faReceipt,
-      faGlobe,
-      faExclamation,
-      faAngleRight,
-      faCaretRight,
-      faInstagram,
-      faInfoCircle,
-      faQuestionCircle,
-      faMusic
+      faMusic,
+      faGithub,
+      faCopyright,
+      faPalette,
+      faUsers
     );
   }
 }
