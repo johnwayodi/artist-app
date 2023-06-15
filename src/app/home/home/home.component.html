@@ -1,11 +1,9 @@
 <div class="section">
-  <p class="artists-title">Artists</p>
-  <hr />
   <div class="content">
     <mat-card class="card-item" *ngFor="let artist of artists; index as i; first as isFirst"
       (click)="openArtistDetails(artist.id)">
       <div mat-card-image class="card-image">
-        <img src="{{ artist.picture_big }}" alt="Photo of {{ artist.name | ucwords }}" />
+        <img src="{{ artist.picture_big }}" alt="Photo of {{ artist.name | ucwords }}"/>
       </div>
       <mat-card-content class="card-content">
         <p class="artist-title">
