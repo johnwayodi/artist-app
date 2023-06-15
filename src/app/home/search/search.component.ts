@@ -19,6 +19,7 @@ export interface State {
 export class SearchComponent implements OnInit {
   stateCtrl = new FormControl();
   artists: any[] = [];
+  inputStyles: string[] = ['color: white', 'background-color: white'];
 
   constructor(private musicService: MusicService, private router: Router) {
     this.stateCtrl.valueChanges

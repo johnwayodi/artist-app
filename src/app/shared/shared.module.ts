@@ -31,6 +31,7 @@ import {
   faCaretRight,
   faInfoCircle,
   faQuestionCircle,
+  faMusic,
 } from '@fortawesome/free-solid-svg-icons';
 import { faUserCircle } from '@fortawesome/free-regular-svg-icons';
 import {
@@ -115,7 +116,8 @@ export class SharedModule {
       faCaretRight,
       faInstagram,
       faInfoCircle,
-      faQuestionCircle
+      faQuestionCircle,
+      faMusic
     );
   }
 }

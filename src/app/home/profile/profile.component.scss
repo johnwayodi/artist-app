@@ -6,7 +6,6 @@
   width: 100%;
   max-width: 1080px;
   font-size: 16px;
-  margin-bottom: 12px;
   margin: auto;
   padding: 16px 32px;
 
@@ -23,8 +22,6 @@
   flex-wrap: wrap;
 
   @include respond-to(handhelds) {
-    padding: 8px;
-    width: 94%;
     margin: auto;
     flex-direction: row;
     justify-content: space-around;
@@ -48,6 +45,8 @@
 .artist-profile {
   width: 45%;
   padding: 0;
+  flex-grow: 1;
+
   @include mat.elevation(0);
 
   @include respond-to(handhelds) {
@@ -55,28 +54,26 @@
   }
 }
 
+.mat-card.artist-profile {
+  padding: 0;
+  margin: 0;
+  border-radius: 4px;
+}
+
 .artist-tracks {
-  width: 55%;
+  width: 50%;
   @include mat.elevation(0);
 
   @include respond-to(handhelds) {
     width: 100%;
-    padding: 0;
+    padding: 20px 0;
   }
 }
 
 .artist-image {
   height: 100%;
   width: 100%;
-  object-position: top;
-  object-fit: none;
   padding: 0;
-
-  @include respond-to(handhelds) {
-    width: 100%;
-    height: fit-content;
-    object-fit: cover;
-  }
 }
 
 .track-details {
@@ -118,8 +115,7 @@
 
 .card-image {
   width: 100%;
-  object-position: center;
-  object-fit: cover;
+  flex-grow: 1;
 
   @include respond-to(handhelds) {
     width: 100%;
@@ -147,9 +143,14 @@
 
 .title {
   width: 100%;
-  margin: 32px 0;
+  margin: 32px 0 8px 0;
   font-size: 2em;
   font-weight: 500;
+
+  @include respond-to(handhelds) {
+    padding-left: 8px;
+    font-size: 1.5em;
+  }
 }
 
 .album-title {
@@ -168,16 +169,25 @@
   margin: 32px 0;
 
   @include respond-to(handhelds) {
-    padding-left: 0;
+    padding-left: 8px;
   }
 }
 
 .artist-name {
   font-size: 40px;
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: 24px;
+
+  @include respond-to(handhelds) {
+    font-size: 24px;
+  }
 }
 .artist-fan-count {
   font-size: 20px;
   font-weight: 400;
+
+  @include respond-to(handhelds) {
+    font-size: 16px;
+    font-style: italic;
+  }
 }
