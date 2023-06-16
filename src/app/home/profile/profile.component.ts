@@ -35,6 +35,7 @@ export class ProfileComponent implements OnInit {
     this.route.params.subscribe((params) => {
       this.artistId = params['artistId'];
       this.getProfile();
+
     });
   }
 
@@ -43,6 +44,7 @@ export class ProfileComponent implements OnInit {
       this.profile = res;
       this.getAlbums();
       this.getTopTracks();
+      window.scrollTo({top:0, left:0, behavior:'smooth'});
     });
   }
 

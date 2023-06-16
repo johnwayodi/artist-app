@@ -25,7 +25,7 @@ export class SearchComponent implements OnInit {
     this.stateCtrl.valueChanges
       .pipe(
         startWith(''),
-        debounceTime(500),
+        debounceTime(200),
         map((state) => this._filterArtists(state))
       )
       .subscribe();
