@@ -1,16 +1,13 @@
 @import "../../../styles/global.scss";
 
 .search-input {
-  margin-top: 14px;
-  width: 30vw;
-  font-size: 14px;
+  width: 100%;
   border-radius: 4px;
   color: black;
-
   background-color: white;
 
   @include respond-to(handhelds) {
-    width: 50vw;
+    width: 95%;
   }
 }
 
