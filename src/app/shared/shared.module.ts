@@ -12,10 +12,12 @@ import {
   faCopyright,
   faPalette,
   faUsers,
+  faList,
+  faListAlt,
+  faRecordVinyl,
+  faMicrophone,
 } from '@fortawesome/free-solid-svg-icons';
-import {
-  faGithub,
-} from '@fortawesome/free-brands-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
@@ -25,12 +27,23 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatChipsModule } from '@angular/material/chips';
 
-import { FooterComponent } from './footer/footer.component';
-import { NotFoundComponent } from './not-found/not-found.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { TrackListComponent } from './components/track-list/track-list.component';
+import { SearchComponent } from './components/search/search.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 @NgModule({
-  declarations: [FooterComponent, NotFoundComponent],
+  declarations: [
+    FooterComponent,
+    NotFoundComponent,
+    TrackListComponent,
+    SearchComponent,
+    NavBarComponent,
+  ],
   imports: [
     CommonModule,
     FormsModule,
@@ -45,6 +58,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
+    MatProgressSpinnerModule,
+    MatChipsModule,
   ],
   exports: [
     FormsModule,
@@ -52,8 +67,6 @@ import { NotFoundComponent } from './not-found/not-found.component';
     FontAwesomeModule,
     NgPipesModule,
     MatToolbarModule,
-    FooterComponent,
-    NotFoundComponent,
     MatCardModule,
     MatListModule,
     MatDividerModule,
@@ -61,6 +74,13 @@ import { NotFoundComponent } from './not-found/not-found.component';
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
+    MatProgressSpinnerModule,
+    MatChipsModule,
+    NotFoundComponent,
+    NavBarComponent,
+    FooterComponent,
+    SearchComponent,
+    TrackListComponent,
   ],
 })
 export class SharedModule {
@@ -71,7 +91,10 @@ export class SharedModule {
       faGithub,
       faCopyright,
       faPalette,
-      faUsers
+      faUsers,
+      faListAlt,
+      faRecordVinyl,
+      faMicrophone
     );
   }
 }

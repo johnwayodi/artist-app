@@ -30,19 +30,26 @@
 .artist-info {
   width: 100%;
   min-height: 45vh;
-  height: 45vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding: 0;
+  margin-top: 2em;
 
   @include respond-to(handhelds) {
     flex-direction: column;
     height: fit-content;
+    margin-top: 0;
   }
 }
 
+.artist-name,
+.artist-fan-count {
+  text-align: center;
+  margin: 8px auto;
+}
+
 .artist-profile {
-  width: 45%;
+  width: 400px;
   padding: 0;
   flex-grow: 1;
 
@@ -60,7 +67,7 @@
 }
 
 .artist-tracks {
-  width: 50%;
+  width: 100%;
   @include mat.elevation(0);
 
   @include respond-to(handhelds) {
@@ -70,23 +77,20 @@
 }
 
 .artist-image {
-  height: 100%;
-  width: 100%;
+  width: 30%;
   padding: 0;
-}
+  margin: 8px auto;
+  border-radius: 8px;
 
-.track-details {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-}
-
-.spacer {
-  flex-grow: 1;
+  @include respond-to(handhelds) {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
 }
 
 .album-section {
-  min-height: 50vh;
+  min-height: fit-content;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -105,9 +109,10 @@
   margin: 8px;
   padding: 0;
   cursor: pointer;
+  border: 1px solid lightgray;
 
   @include respond-to(handhelds) {
-    width: 40%;
+    width: 45%;
     height: fit-content;
   }
 }
@@ -122,11 +127,12 @@
 }
 
 .card-content {
-  height: 100%;
+  min-height: 10vh;
+  height: fit-content;
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 8px 0;
+  padding-left: 8px;
 }
 
 .card-title {
@@ -141,14 +147,13 @@
 }
 
 .title {
-  width: 100%;
-  margin: 32px 0 8px 0;
-  font-size: 2em;
+  width: fit-content;
+  margin: 32px 0 0 16px;
+  font-size: 20px;
   font-weight: 500;
 
   @include respond-to(handhelds) {
-    padding-left: 8px;
-    font-size: 1.5em;
+    font-size: 16px;
   }
 }
 
@@ -176,6 +181,7 @@
   font-size: 40px;
   font-weight: 400;
   margin-bottom: 24px;
+  color: #003249;
 
   @include respond-to(handhelds) {
     font-size: 24px;

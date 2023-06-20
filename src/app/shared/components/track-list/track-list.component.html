@@ -1,0 +1,23 @@
+<mat-list>
+    <mat-list-item *ngFor="let track of tracks; index as i" class="track-details"
+        style="height: fit-content; padding: 4px 0;">
+        <div>
+            <mat-divider *ngIf="i < tracks.length -1"></mat-divider>
+            <p>{{ i + 1 }}. {{ track.title }}</p>
+            <span>
+                <fa-icon [icon]="['fas', 'record-vinyl']"></fa-icon>
+                <span>{{ track.album.title }}</span>
+            </span>
+            <mat-chip-list style="padding: 8px 0;">
+                <mat-chip *ngFor="let artist of track.contributors; index as i" (click)="loadArtistProfile(artist.id)">
+                    <mat-chip-avatar>
+                        <img src="{{artist.picture_small}}" alt="Photo of a Shiba Inu" />
+                    </mat-chip-avatar>
+                    {{ artist.name }}
+                </mat-chip>
+            </mat-chip-list>
+        </div>
+        <div class="spacer"></div>
+        <div class="track-duration">{{ track.duration }}</div>
+    </mat-list-item>
+</mat-list>

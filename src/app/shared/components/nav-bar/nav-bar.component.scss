@@ -1,5 +1,5 @@
 @use "@angular/material" as mat;
-@import "../../../styles/global.scss";
+@import "../../../../styles/global.scss";
 
 .nav-bar {
   height: 60px;
@@ -10,7 +10,7 @@
   top: 0;
   z-index: 300;
   @include mat.elevation(6);
-  background-color: #070f4e;
+  background-color: #1f1a38;
   color: white;
 
   @include respond-to(handhelds) {
@@ -18,7 +18,7 @@
   }
 }
 
-.nav-content{
+.nav-content {
   width: 100%;
   max-width: 1366px;
   margin: 0 auto;
@@ -30,16 +30,25 @@
   width: 200px;
   cursor: pointer;
   display: flex;
-  align-items: center;
-  padding-right: 1em;
+  padding: 8px 8px;
+  color: #fed766;
 
   @include respond-to(handhelds) {
     font-size: 20px;
+    padding: 16px 8px;
     width: fit-content;
   }
 }
 
-.search-item{
+.logo span {
+  padding: 8px;
+
+  @include respond-to(handhelds) {
+    padding: 0 0 0 8px;
+  }
+}
+
+.search-item {
   width: 400px;
 
   @include respond-to(handhelds) {

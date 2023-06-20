@@ -1,5 +1,5 @@
 @use "@angular/material" as mat;
-@import "../../../styles/global.scss";
+@import "../../../../styles/global.scss";
 
 .footer {
   height: fit-content;
@@ -10,16 +10,16 @@
   color: white;
 }
 
-.gitlink{
+.gitlink {
   font-size: 16px;
   color: white;
 }
 
-.copyright{
+.copyright {
   font-size: 14px;
   padding: 1em 0;
 }
 
-.footer .ng-fa-icon{
+.footer .ng-fa-icon {
   padding: 4px;
 }
