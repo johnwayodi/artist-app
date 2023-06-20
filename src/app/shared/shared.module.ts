@@ -33,9 +33,17 @@ import { MatChipsModule } from '@angular/material/chips';
 import { FooterComponent } from './components/footer/footer.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { TrackListComponent } from './components/track-list/track-list.component';
+import { SearchComponent } from './components/search/search.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 @NgModule({
-  declarations: [FooterComponent, NotFoundComponent, TrackListComponent],
+  declarations: [
+    FooterComponent,
+    NotFoundComponent,
+    TrackListComponent,
+    SearchComponent,
+    NavBarComponent,
+  ],
   imports: [
     CommonModule,
     FormsModule,
@@ -59,9 +67,6 @@ import { TrackListComponent } from './components/track-list/track-list.component
     FontAwesomeModule,
     NgPipesModule,
     MatToolbarModule,
-    FooterComponent,
-    NotFoundComponent,
-    TrackListComponent,
     MatCardModule,
     MatListModule,
     MatDividerModule,
@@ -71,6 +76,11 @@ import { TrackListComponent } from './components/track-list/track-list.component
     MatInputModule,
     MatProgressSpinnerModule,
     MatChipsModule,
+    NotFoundComponent,
+    NavBarComponent,
+    FooterComponent,
+    SearchComponent,
+    TrackListComponent,
   ],
 })
 export class SharedModule {

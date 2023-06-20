@@ -3,17 +3,10 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SharedModule } from '../shared/shared.module';
-import { SearchComponent } from './search/search.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 @NgModule({
-  declarations: [
-    HomeComponent,
-    ProfileComponent,
-    SearchComponent,
-    NavBarComponent,
-  ],
+  declarations: [HomeComponent, ProfileComponent],
   imports: [CommonModule, SharedModule],
-  exports: [HomeComponent, ProfileComponent, SearchComponent, NavBarComponent],
+  exports: [HomeComponent, ProfileComponent],
 })
 export class HomeModule {}
