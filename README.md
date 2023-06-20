@@ -1,7 +1,7 @@
 # <a href="https://artist-app-johnwayodi.vercel.app/" target="_blank">🔗 Artista</a>
 Get information about Artists
 
-Information fetched from the [Deezer API](https://api.deezer.com)
+Information fetched from the [Deezer API](https://developers.deezer.com/api)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
 
