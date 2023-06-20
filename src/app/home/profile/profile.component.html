@@ -9,29 +9,7 @@
       </div>
       <mat-card class="artist-tracks">
         <h3 class="title"><fa-icon [icon]="['fas', 'list-alt']"></fa-icon> Top Tracks</h3>
-        <mat-list>
-          <mat-list-item *ngFor="let track of topTracks; index as i" class="track-details"
-            style="height: fit-content; padding: 4px 0;">
-            <div>
-              <mat-divider *ngIf="i < topTracks.length -1"></mat-divider>
-              <p>{{ i + 1 }}. {{ track.title }}</p>
-              <span>
-                <fa-icon [icon]="['fas', 'record-vinyl']"></fa-icon>
-                <span>{{ track.album.title }}</span>
-              </span>
-              <mat-chip-list style="padding: 8px 0;">
-                <mat-chip *ngFor="let artist of track.contributors; index as i">
-                  <mat-chip-avatar>
-                    <img src="{{artist.picture_small}}" alt="Photo of a Shiba Inu" />
-                  </mat-chip-avatar>
-                  {{ artist.name }}
-                </mat-chip>
-              </mat-chip-list>
-            </div>
-            <div class="spacer"></div>
-            <div class="track-duration">{{ track.duration }}</div>
-          </mat-list-item>
-        </mat-list>
+        <app-track-list [tracks]="topTracks"></app-track-list>
       </mat-card>
     </div>
     <div class="title">Albums ({{ profile && profile.nb_album }})</div>
@@ -57,29 +35,7 @@
       </div>
       <mat-card class="artist-tracks">
         <h3 class="title"><fa-icon [icon]="['fas', 'list-alt']"></fa-icon> Top Tracks</h3>
-        <mat-list>
-          <mat-list-item *ngFor="let track of topTracks; index as i" class="track-details"
-            style="height: fit-content; padding: 4px 0;">
-            <div>
-              <mat-divider *ngIf="i < topTracks.length -1"></mat-divider>
-              <p>{{ i + 1 }}. {{ track.title }}</p>
-              <span>
-                <fa-icon [icon]="['fas', 'record-vinyl']"></fa-icon>
-                <span>{{ track.album.title }}</span>
-              </span>
-              <mat-chip-list style="padding: 8px 0;">
-                <mat-chip *ngFor="let artist of track.contributors; index as i">
-                  <mat-chip-avatar>
-                    <img src="{{artist.picture_small}}" alt="Photo of a Shiba Inu" />
-                  </mat-chip-avatar>
-                  {{ artist.name }}
-                </mat-chip>
-              </mat-chip-list>
-            </div>
-            <div class="spacer"></div>
-            <div class="track-duration">{{ track.duration }}</div>
-          </mat-list-item>
-        </mat-list>
+        <app-track-list [tracks]="topTracks"></app-track-list>
       </mat-card>
     </div>
     <p class="title">Albums ({{ profile && profile.nb_album }})</p>

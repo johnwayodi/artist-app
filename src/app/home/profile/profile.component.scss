@@ -89,69 +89,6 @@
   }
 }
 
-.track-details {
-  width: 100%;
-  display: flex;
-  height: fit-content;
-  flex-direction: row;
-}
-
-.track-details div {
-  display: flex;
-  flex-direction: column;
-}
-
-.track-details p {
-  font-weight: 500;
-  margin: 0 0 8px;
-}
-
-.track-details span {
-  font-size: 12px;
-}
-
-.track-details span p {
-  font-size: 12px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.ng-fa-icon {
-  padding-right: 4px;
-}
-
-.track-album-details {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-}
-
-.mat-list-item-content {
-  height: fit-content;
-  flex-direction: row;
-  align-items: flex-start;
-}
-
-.track-duration {
-  align-self: flex-start;
-  background-color: #231956;
-  margin-top: 4px;
-  padding: 2px 8px;
-  border-radius: 16px;
-  font-size: 12px;
-  font-weight: 600;
-  height: fit-content;
-  color: #fed766;
-}
-
-.spacer {
-  flex-grow: 1;
-}
-
-.ng-fa-icon {
-  color: #1f1a38;
-}
-
 .album-section {
   min-height: fit-content;
   width: 100%;

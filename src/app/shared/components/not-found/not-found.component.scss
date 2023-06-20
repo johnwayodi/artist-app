@@ -1,7 +1,7 @@
-@import '../../../styles/global.scss';
+@import "../../../../styles/global.scss";
 
 .page {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   min-height: 100vh;
   display: flex;
   width: 100%;
@@ -28,7 +28,7 @@
   font-weight: 400;
   margin-bottom: 20px;
 
-  @include respond-to('xs-l') {
+  @include respond-to("xs-l") {
     font-size: 20px;
   }
 }
@@ -39,7 +39,7 @@
   color: #1890ff;
   cursor: pointer;
   border-bottom: 1px solid #1890ff;
-  @include respond-to('xs-l') {
+  @include respond-to("xs-l") {
     font-size: 14px;
   }
 }
@@ -48,7 +48,7 @@
   font-size: 60px;
   color: #1890ff;
 
-  @include respond-to('xs-l') {
+  @include respond-to("xs-l") {
     font-size: 30px;
   }
 }

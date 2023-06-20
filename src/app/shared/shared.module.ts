@@ -30,11 +30,12 @@ import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatChipsModule } from '@angular/material/chips';
 
-import { FooterComponent } from './footer/footer.component';
-import { NotFoundComponent } from './not-found/not-found.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { TrackListComponent } from './components/track-list/track-list.component';
 
 @NgModule({
-  declarations: [FooterComponent, NotFoundComponent],
+  declarations: [FooterComponent, NotFoundComponent, TrackListComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -60,6 +61,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     MatToolbarModule,
     FooterComponent,
     NotFoundComponent,
+    TrackListComponent,
     MatCardModule,
     MatListModule,
     MatDividerModule,
