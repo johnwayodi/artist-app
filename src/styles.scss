@@ -58,3 +58,7 @@ body {
     stroke: #fed766;
   }
 }
+
+.mat-autocomplete-panel {
+  touch-action: manipulation;
+}
