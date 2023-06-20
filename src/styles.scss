@@ -46,3 +46,15 @@ body {
   margin: 0;
   font-family: Nunito, "Helvetica Neue", sans-serif !important;
 }
+
+.app-loader {
+  min-height: 93vh;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .mat-progress-spinner circle {
+    stroke: #fed766;
+  }
+}

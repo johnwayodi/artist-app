@@ -12,10 +12,12 @@ import {
   faCopyright,
   faPalette,
   faUsers,
+  faList,
+  faListAlt,
+  faRecordVinyl,
+  faMicrophone,
 } from '@fortawesome/free-solid-svg-icons';
-import {
-  faGithub,
-} from '@fortawesome/free-brands-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
@@ -25,6 +27,8 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatChipsModule } from '@angular/material/chips';
 
 import { FooterComponent } from './footer/footer.component';
 import { NotFoundComponent } from './not-found/not-found.component';
@@ -45,6 +49,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
+    MatProgressSpinnerModule,
+    MatChipsModule,
   ],
   exports: [
     FormsModule,
@@ -61,6 +67,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
+    MatProgressSpinnerModule,
+    MatChipsModule,
   ],
 })
 export class SharedModule {
@@ -71,7 +79,10 @@ export class SharedModule {
       faGithub,
       faCopyright,
       faPalette,
-      faUsers
+      faUsers,
+      faListAlt,
+      faRecordVinyl,
+      faMicrophone
     );
   }
 }

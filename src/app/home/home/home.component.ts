@@ -9,6 +9,7 @@ import { MusicService } from 'src/app/core/services/music.service';
 })
 export class HomeComponent implements OnInit {
   artists: any[] = [];
+  isLoading: Boolean = false;
   randomLetter: string = String.fromCharCode(
     97 + Math.floor(Math.random() * 26)
   );
@@ -16,8 +17,10 @@ export class HomeComponent implements OnInit {
   constructor(private musicService: MusicService, private router: Router) {}
 
   ngOnInit(): void {
+    this.isLoading = true;
     this.musicService.getArtists(this.randomLetter).subscribe((res) => {
       this.artists = res.data;
+      this.isLoading = false;
     });
   }
 

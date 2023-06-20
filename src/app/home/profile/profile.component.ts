@@ -17,6 +17,7 @@ export class ProfileComponent implements OnInit {
   albums: any[] = [];
   topTracks: any[] = [];
   artistId!: number;
+  isLoading: Boolean = false;
 
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe(Breakpoints.Handset)
@@ -34,8 +35,8 @@ export class ProfileComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe((params) => {
       this.artistId = params['artistId'];
+      this.isLoading = true;
       this.getProfile();
-
     });
   }
 
@@ -44,7 +45,7 @@ export class ProfileComponent implements OnInit {
       this.profile = res;
       this.getAlbums();
       this.getTopTracks();
-      window.scrollTo({top:0, left:0, behavior:'smooth'});
+      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     });
   }
 
@@ -60,12 +61,12 @@ export class ProfileComponent implements OnInit {
   getTopTracks() {
     this.musicService.getTopTracks(this.artistId).subscribe((res) => {
       let tracks = orderBy(res.data, ['rank'], ['desc']);
-      console.log(res.data);
       this.topTracks = tracks.map((track) => {
         const duration = format(track.duration * 1000, 'mm:ss');
         track.duration = duration;
         return track;
       });
+      this.isLoading = false;
     });
   }
 }
