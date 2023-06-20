@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AppEventService } from 'src/app/core/services/app-event.service';
 
 @Component({
   selector: 'app-track-list',
@@ -9,11 +10,22 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class TrackListComponent implements OnInit {
   @Input() tracks: any[] = [];
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private appService: AppEventService) {}
 
   ngOnInit(): void {}
 
   loadArtistProfile(artistId: number) {
     this.router.navigateByUrl(`/artist/${artistId}`);
+  }
+
+  playTrack(selected: any) {
+    console.log('Selected', selected);
+    this.appService.broadcast({
+      name: 'updateSelectedTrack',
+      content: {
+        title: this.tracks[selected].title,
+        link: this.tracks[selected].preview,
+      },
+    });
   }
 }
