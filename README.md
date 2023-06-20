@@ -6,12 +6,15 @@ Information fetched from the [Deezer API](https://api.deezer.com)
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
 
 ## Screenshots
+![Screenshot 2023-06-20 at 10 25 19](https://github.com/johnwayodi/artist-app/assets/10683903/7838bd9f-523f-4812-9505-57a94d3a9846)
 
-![Screenshot 2023-06-15 at 23 18 10](https://github.com/johnwayodi/artist-app/assets/10683903/aa35d8dc-1476-406d-a7aa-b89fb624dd83)
+![Screenshot 2023-06-20 at 10 27 58](https://github.com/johnwayodi/artist-app/assets/10683903/33e78595-75e6-40fa-8549-fd8e1e61f7c5)
 
-![Screenshot 2023-06-15 at 22 09 30](https://github.com/johnwayodi/artist-app/assets/10683903/01563bfa-f89e-4c54-8c2c-4dc0b6e0f8ef)
+![Screenshot 2023-06-20 at 10 26 11](https://github.com/johnwayodi/artist-app/assets/10683903/918f9790-27ff-4a7d-a0cd-be5e14adb37a)
 
 ## Development server
+
+Run `npm i` to install packages.
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
