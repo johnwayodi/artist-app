@@ -16,6 +16,8 @@ import {
   faListAlt,
   faRecordVinyl,
   faMicrophone,
+  faPlayCircle,
+  faPizzaSlice,
 } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
@@ -35,6 +37,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { TrackListComponent } from './components/track-list/track-list.component';
 import { SearchComponent } from './components/search/search.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { TrackPlayerComponent } from './components/track-player/track-player.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +46,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
     TrackListComponent,
     SearchComponent,
     NavBarComponent,
+    TrackPlayerComponent,
   ],
   imports: [
     CommonModule,
@@ -81,6 +85,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
     FooterComponent,
     SearchComponent,
     TrackListComponent,
+    TrackPlayerComponent,
   ],
 })
 export class SharedModule {
@@ -94,7 +99,9 @@ export class SharedModule {
       faUsers,
       faListAlt,
       faRecordVinyl,
-      faMicrophone
+      faMicrophone,
+      faPlayCircle,
+      faPizzaSlice
     );
   }
 }

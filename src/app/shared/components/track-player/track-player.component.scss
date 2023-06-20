@@ -1,0 +1,12 @@
+.audio-player {
+  display: flex;
+  align-items: center;
+}
+
+.audio-player .ng-fa-icon {
+  padding-right: 4px;
+}
+
+.audio-player audio {
+  height: 30px; /* Adjust the height value as per your requirement */
+}
