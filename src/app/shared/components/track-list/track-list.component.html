@@ -1,4 +1,4 @@
-<mat-list>
+<mat-list class="tracklists">
     <mat-list-item *ngFor="let track of tracks; index as i" class="track-details"
         style="height: fit-content; padding: 4px 0;">
         <div>
@@ -9,7 +9,7 @@
                 <span>{{ track.album.title }}</span>
             </span>
             <app-track-player [track]="track"></app-track-player>
-            <mat-chip-list style="padding: 8px 0;">
+            <mat-chip-list style="padding: 4px 0;">
                 <mat-chip *ngFor="let artist of track.contributors; index as i" (click)="loadArtistProfile(artist.id)">
                     <mat-chip-avatar>
                         <img src="{{artist.picture_small}}" alt="{{artist.name}}" />

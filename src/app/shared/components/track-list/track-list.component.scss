@@ -7,6 +7,14 @@
   flex-direction: row;
 }
 
+.track-details-active {
+  width: 100%;
+  display: flex;
+  height: fit-content;
+  flex-direction: row;
+  background: linear-gradient(to right, white, rgb(237, 209, 237));
+}
+
 .track-details div {
   display: flex;
   flex-direction: column;
@@ -37,22 +45,17 @@
   flex-direction: row;
 }
 
-.mat-list-item-content {
+.tracklists ::ng-deep .mat-list-item-content {
   height: fit-content;
   flex-direction: row;
   align-items: flex-start;
+  padding-bottom: 8px !important;
 }
 
 .track-duration {
   align-self: flex-start;
-  // background-color: #231956;
   margin-top: 4px;
   padding: 2px 8px;
-  // border-radius: 16px;
-  // font-size: 12px;
-  // font-weight: 600;
-  // height: fit-content;
-  // color: #fed766;
 
   @include respond-to(handhelds) {
     margin-right: 0;
