@@ -46,6 +46,5 @@ export class SearchComponent implements OnInit {
       (item) => item.name === data.option.value
     );
     this.router.navigate(['/artist', this.artists[artistIndex].id]);
-    return;
   }
 }

@@ -1,0 +1,26 @@
+<div *ngIf="isLoading" class="app-loader"><mat-spinner></mat-spinner></div>
+<div class="section" *ngIf="!isLoading">
+    <div class="content">
+        <div class="artist-info album-content">
+            <img class="artist-image" src="{{ album && album.cover_big }}" alt="{{ album && album.title }}" />
+            <div class="artist-name">{{ album && album.title }}</div>
+            <div class="artist-fan-count"><span>Album By:</span>
+                <mat-chip (click)="loadArtistProfile(album.artist.id)">
+                    <mat-chip-avatar>
+                        <img src="{{album.artist.picture_small}}" alt="{{album.artist.name}}" />
+                    </mat-chip-avatar>
+                    {{ album.artist.name }}
+                </mat-chip>
+            </div>
+            <div class="artist-fan-count">Released: {{ album && album.release_date | date: "EEE, MMM d, y" }}</div>
+            <div class="artist-fan-count">
+                <fa-icon [icon]="['fas', 'users']"></fa-icon> {{ album && album.fans | number }} Fans
+                <fa-icon [icon]="['fas', 'music']"></fa-icon> {{ album && album.nb_tracks | number }} Tracks
+            </div>
+            <mat-card class="artist-tracks">
+                <h3 class="title"><fa-icon [icon]="['fas', 'list-alt']"></fa-icon> Top Tracks</h3>
+                <app-track-list [tracks]="tracks"></app-track-list>
+            </mat-card>
+        </div>
+    </div>
+</div>

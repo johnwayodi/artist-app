@@ -7,7 +7,9 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root',
 })
 export class MusicService {
-  private endpoint = `${environment.apiUrl}/artist`;
+  private artistUrl = `${environment.apiUrl}/artist`;
+  private albumUrl = `${environment.apiUrl}/album`;
+  private trackUrl = `${environment.apiUrl}/track`;
 
   constructor(private http: HttpClient) {}
 
@@ -21,14 +23,22 @@ export class MusicService {
   }
 
   getProfile(artistId: number): Observable<any> {
-    return this.http.get(`${this.endpoint}/${artistId}`);
+    return this.http.get(`${this.artistUrl}/${artistId}`);
   }
 
   getAlbums(artistId: number): Observable<any> {
-    return this.http.get(`${this.endpoint}/${artistId}/albums`);
+    return this.http.get(`${this.artistUrl}/${artistId}/albums`);
   }
 
   getTopTracks(artistId: number): Observable<any> {
-    return this.http.get(`${this.endpoint}/${artistId}/top`);
+    return this.http.get(`${this.artistUrl}/${artistId}/top?limit=10`);
+  }
+
+  getAlbumDetails(albumId: number): Observable<any> {
+    return this.http.get(`${this.albumUrl}/${albumId}`);
+  }
+
+  getTrackDetails(trackId: number): Observable<any> {
+    return this.http.get(`${this.trackUrl}/${trackId}`);
   }
 }

@@ -45,14 +45,14 @@
 
 .track-duration {
   align-self: flex-start;
-  background-color: #231956;
+  // background-color: #231956;
   margin-top: 4px;
   padding: 2px 8px;
-  border-radius: 16px;
-  font-size: 12px;
-  font-weight: 600;
-  height: fit-content;
-  color: #fed766;
+  // border-radius: 16px;
+  // font-size: 12px;
+  // font-weight: 600;
+  // height: fit-content;
+  // color: #fed766;
 
   @include respond-to(handhelds) {
     margin-right: 0;
