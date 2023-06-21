@@ -40,7 +40,7 @@
     </div>
     <p class="title">Albums ({{ profile && profile.nb_album }})</p>
     <div class="album-section">
-      <div *ngFor="let album of albums; index as i" class="card-item">
+      <div *ngFor="let album of albums; index as i" class="card-item" (click)="goToAlbum(album.id)">
         <img class="card-image" src="{{ album.cover_big }}" alt="Photo of {{ album.title }}" />
         <div class="card-content">
           <p class="album-title">{{ album.title | ucwords }}</p>

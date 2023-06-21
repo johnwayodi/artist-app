@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { orderBy, uniqBy } from 'lodash';
 import { format } from 'date-fns';
@@ -28,6 +28,7 @@ export class ProfileComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private breakpointObserver: BreakpointObserver,
     private musicService: MusicService
   ) {}
@@ -68,5 +69,9 @@ export class ProfileComponent implements OnInit {
       });
       this.isLoading = false;
     });
+  }
+
+  goToAlbum(albumId: number) {
+    this.router.navigate([`/artist/${this.artistId}/albums/${albumId}`]);
   }
 }

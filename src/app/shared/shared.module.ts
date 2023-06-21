@@ -12,7 +12,6 @@ import {
   faCopyright,
   faPalette,
   faUsers,
-  faList,
   faListAlt,
   faRecordVinyl,
   faMicrophone,

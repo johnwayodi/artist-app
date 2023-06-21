@@ -12,7 +12,7 @@
             <mat-chip-list style="padding: 8px 0;">
                 <mat-chip *ngFor="let artist of track.contributors; index as i" (click)="loadArtistProfile(artist.id)">
                     <mat-chip-avatar>
-                        <img src="{{artist.picture_small}}" alt="Photo of a Shiba Inu" />
+                        <img src="{{artist.picture_small}}" alt="{{artist.name}}" />
                     </mat-chip-avatar>
                     {{ artist.name }}
                 </mat-chip>
