@@ -1,6 +1,6 @@
 <div class="audio-player">
     <fa-icon [icon]="['fas', 'pizza-slice']"></fa-icon>
-    <audio controls>
+    <audio #audioElement controls id="{{track.id}}" title="{{track.title}}" (play)="onAudioPlayed()">
         <source [src]="track.preview" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>

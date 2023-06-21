@@ -17,15 +17,4 @@ export class TrackListComponent implements OnInit {
   loadArtistProfile(artistId: number) {
     this.router.navigateByUrl(`/artist/${artistId}`);
   }
-
-  playTrack(selected: any) {
-    console.log('Selected', selected);
-    this.appService.broadcast({
-      name: 'updateSelectedTrack',
-      content: {
-        title: this.tracks[selected].title,
-        link: this.tracks[selected].preview,
-      },
-    });
-  }
 }
