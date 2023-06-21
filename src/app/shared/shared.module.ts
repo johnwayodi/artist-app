@@ -19,6 +19,7 @@ import {
   faPizzaSlice,
 } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faArrowAltCircleRight } from '@fortawesome/free-regular-svg-icons';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
@@ -100,7 +101,8 @@ export class SharedModule {
       faRecordVinyl,
       faMicrophone,
       faPlayCircle,
-      faPizzaSlice
+      faPizzaSlice,
+      faArrowAltCircleRight
     );
   }
 }
