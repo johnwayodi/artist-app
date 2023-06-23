@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { MatAutocompleteTrigger } from '@angular/material/autocomplete';
 import { Router } from '@angular/router';
 import { Observable, debounceTime } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
@@ -46,6 +47,16 @@ export class SearchComponent implements OnInit {
     let artistIndex = this.artists.findIndex(
       (item) => item.name === data.option.value
     );
+    this.closeKeyboard();
     this.router.navigate(['/artist', this.artists[artistIndex].id]);
+  }
+
+  closeKeyboard() {
+    const autocompleteTrigger: any = document.querySelector(
+      '.mat-autocomplete-trigger'
+    );
+    if (autocompleteTrigger) {
+      autocompleteTrigger.closePanel();
+    }
   }
 }
