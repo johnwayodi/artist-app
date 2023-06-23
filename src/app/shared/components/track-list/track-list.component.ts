@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { AppEventService } from 'src/app/core/services/app-event.service';
+import { Router } from '@angular/router';
+import { Track } from 'src/utils';
 
 @Component({
   selector: 'app-track-list',
@@ -8,9 +8,9 @@ import { AppEventService } from 'src/app/core/services/app-event.service';
   styleUrls: ['./track-list.component.scss'],
 })
 export class TrackListComponent implements OnInit {
-  @Input() tracks: any[] = [];
+  @Input() tracks: Track[] = [];
 
-  constructor(private router: Router, private appService: AppEventService) {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
 

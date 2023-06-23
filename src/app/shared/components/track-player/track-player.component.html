@@ -1,6 +1,16 @@
 <div class="audio-player">
     <fa-icon [icon]="['fas', 'pizza-slice']"></fa-icon>
-    <audio #audioElement controls id="{{track.id}}" title="{{track.title}}" (play)="onAudioPlayed()">
+    <span class="audio-sample">Sample (30 sec)</span>
+    <button mat-mini-fab *ngIf="!isPlaying" (click)="playAudio()" class="play-btn">
+        <fa-icon [icon]="['fas', 'play']" [styles]="{'color': '#fed766'}"></fa-icon>
+    </button>
+    <button mat-mini-fab *ngIf="isPlaying" (click)="stopAudio()" class="pause-btn">
+        <fa-icon [icon]="['fas', 'pause']" [styles]="{'color': '#1f1a38'}"></fa-icon>
+    </button>
+    <button mat-mini-fab (click)="downloadAudio()" *ngIf="isPlaying" class="download-btn">
+        <fa-icon [icon]="['fas', 'download']" [styles]="{'color': '#fed766'}"></fa-icon>
+    </button>
+    <audio #audioElement id="{{track.id}}" title="{{track.title}}" (play)="onAudioPlayed()" (ended)="onAudioEnded()">
         <source [src]="track.preview" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>

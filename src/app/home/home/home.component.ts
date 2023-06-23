@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MusicService } from 'src/app/core/services/music.service';
+import { Artist } from 'src/utils';
 
 @Component({
   selector: 'app-home',
@@ -8,8 +9,8 @@ import { MusicService } from 'src/app/core/services/music.service';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  artists: any[] = [];
-  isLoading: Boolean = false;
+  artists: Artist[] = [];
+  isLoading: boolean = false;
   randomLetter: string = String.fromCharCode(
     97 + Math.floor(Math.random() * 26)
   );

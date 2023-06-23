@@ -17,6 +17,9 @@ import {
   faMicrophone,
   faPlayCircle,
   faPizzaSlice,
+  faPlay,
+  faPause,
+  faDownload,
 } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faArrowAltCircleRight } from '@fortawesome/free-regular-svg-icons';
@@ -31,6 +34,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatButtonModule } from '@angular/material/button';
 
 import { FooterComponent } from './components/footer/footer.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
@@ -64,6 +68,7 @@ import { TrackPlayerComponent } from './components/track-player/track-player.com
     MatInputModule,
     MatProgressSpinnerModule,
     MatChipsModule,
+    MatButtonModule,
   ],
   exports: [
     FormsModule,
@@ -80,6 +85,7 @@ import { TrackPlayerComponent } from './components/track-player/track-player.com
     MatInputModule,
     MatProgressSpinnerModule,
     MatChipsModule,
+    MatButtonModule,
     NotFoundComponent,
     NavBarComponent,
     FooterComponent,
@@ -102,7 +108,10 @@ export class SharedModule {
       faMicrophone,
       faPlayCircle,
       faPizzaSlice,
-      faArrowAltCircleRight
+      faArrowAltCircleRight,
+      faPlay,
+      faPause,
+      faDownload
     );
   }
 }
