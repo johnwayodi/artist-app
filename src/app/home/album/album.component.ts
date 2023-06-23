@@ -34,7 +34,7 @@ export class AlbumComponent implements OnInit {
     this.musicService.getAlbumDetails(this.albumId).subscribe((res) => {
       this.album = res;
       this.tracks = res.tracks.data;
-      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, left: 0 });
       this.isLoading = false;
     });
   }

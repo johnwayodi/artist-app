@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Observable, debounceTime } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 import { MusicService } from 'src/app/core/services/music.service';
+import { Artist } from 'src/utils';
 
 export interface State {
   flag: string;
@@ -18,7 +19,7 @@ export interface State {
 })
 export class SearchComponent implements OnInit {
   stateCtrl = new FormControl();
-  artists: any[] = [];
+  artists: Artist[] = [];
   inputStyles: string[] = ['color: white', 'background-color: white'];
 
   constructor(private musicService: MusicService, private router: Router) {
@@ -33,7 +34,7 @@ export class SearchComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  private _filterArtists(value: string): any {
+  private _filterArtists(value: string): void {
     const filterValue = value.toLowerCase();
 
     this.musicService.getArtists(filterValue).subscribe((res) => {

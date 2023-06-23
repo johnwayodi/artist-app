@@ -6,6 +6,7 @@ import { format } from 'date-fns';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { map, shareReplay } from 'rxjs/operators';
 import { MusicService } from 'src/app/core/services/music.service';
+import { Artist, Track } from 'src/utils';
 
 @Component({
   selector: 'app-profile',
@@ -13,11 +14,11 @@ import { MusicService } from 'src/app/core/services/music.service';
   styleUrls: ['./profile.component.scss'],
 })
 export class ProfileComponent implements OnInit {
-  profile: any;
+  profile!: Artist;
   albums: any[] = [];
-  topTracks: any[] = [];
+  topTracks: Track[] = [];
   artistId!: number;
-  isLoading: Boolean = false;
+  isLoading: boolean = false;
 
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe(Breakpoints.Handset)
@@ -46,7 +47,7 @@ export class ProfileComponent implements OnInit {
       this.profile = res;
       this.getAlbums();
       this.getTopTracks();
-      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, left: 0 });
     });
   }
 
@@ -62,9 +63,9 @@ export class ProfileComponent implements OnInit {
   getTopTracks() {
     this.musicService.getTopTracks(this.artistId).subscribe((res) => {
       let tracks = orderBy(res.data, ['rank'], ['desc']);
-      this.topTracks = tracks.map((track) => {
+      this.topTracks = tracks.map((track: Track) => {
         const duration = format(track.duration * 1000, 'mm:ss');
-        track.duration = duration;
+        track.durationString = duration;
         return track;
       });
       this.isLoading = false;
