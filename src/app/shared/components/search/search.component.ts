@@ -47,7 +47,6 @@ export class SearchComponent implements OnInit {
     let artistIndex = this.artists.findIndex(
       (item) => item.name === data.option.value
     );
-    this.closeKeyboard();
     this.router.navigate(['/artist', this.artists[artistIndex].id]);
   }
 
