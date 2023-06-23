@@ -1,12 +1,15 @@
 import {
+  AfterViewInit,
   ChangeDetectorRef,
   Component,
+  ElementRef,
   Input,
   OnInit,
   ViewChild,
 } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { AppEventService } from 'src/app/core/services/app-event.service';
+import { Track } from 'src/utils';
 
 @Component({
   selector: 'app-track-player',
@@ -14,9 +17,9 @@ import { AppEventService } from 'src/app/core/services/app-event.service';
   styleUrls: ['./track-player.component.scss'],
 })
 export class TrackPlayerComponent implements OnInit {
-  @Input() track: any;
+  @Input() track!: Track;
   selectedTrack: any;
-  @ViewChild('audioElement') audioElement: any;
+  @ViewChild('audioElement') audioElement!: ElementRef<HTMLAudioElement>;
   isPlaying = false;
   pageMenuSubscription: Subscription = this.appService.subscribe(
     'updateSelectedTrack',
@@ -27,6 +30,7 @@ export class TrackPlayerComponent implements OnInit {
 
       if (this.track.title !== title) {
         this.stopAudio();
+        this.isPlaying = false;
       }
     }
   );
@@ -35,8 +39,27 @@ export class TrackPlayerComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  playAudio() {
+    this.audioElement.nativeElement.play();
+    this.isPlaying = true;
+  }
+
   stopAudio() {
     this.audioElement.nativeElement.pause();
+    this.isPlaying = false;
+  }
+
+  downloadAudio() {
+    fetch(this.track.preview)
+      .then((response) => response.blob())
+      .then((blob) => {
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `${this.track.title_short} - ${this.track.artist?.name} - Artista Preview.mp3`;
+        link.click();
+        URL.revokeObjectURL(url);
+      });
   }
 
   onAudioPlayed() {
@@ -46,5 +69,9 @@ export class TrackPlayerComponent implements OnInit {
         title: this.track.title,
       },
     });
+  }
+
+  onAudioEnded() {
+    this.isPlaying = false;
   }
 }

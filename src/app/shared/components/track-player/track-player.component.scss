@@ -8,6 +8,29 @@
   padding-right: 4px;
 }
 
+.audio-player .audio-sample {
+  padding-right: 4px;
+  font-size: 12px;
+}
+
 .audio-player audio {
   height: 30px; /* Adjust the height value as per your requirement */
+}
+
+.play-btn,
+.pause-btn,
+.download-btn {
+  margin-right: 16px;
+  .ng-fa-icon {
+    padding: 0;
+  }
+}
+
+.play-btn,
+.download-btn {
+  background-color: #1f1a38;
+}
+
+.pause-btn {
+  background-color: #ffcc00;
 }
