@@ -5,6 +5,9 @@
       <img class="artist-image" src="{{ profile && profile.picture_big }}" alt="{{ profile && profile.name }}" />
       <div class="artist-name">{{ profile && profile.name }}</div>
       <div class="artist-fan-count">
+        <fa-icon [icon]="['fas', 'record-vinyl']"></fa-icon> {{ profile && profile.nb_album | number }} Albums
+      </div>
+      <div class="artist-fan-count">
         <fa-icon [icon]="['fas', 'users']"></fa-icon> {{ profile && profile.nb_fan | number }} Fans
       </div>
       <mat-card class="artist-tracks">
@@ -18,7 +21,14 @@
         <img class="card-image" src="{{ album.cover_big }}" alt="Photo of {{ album.title }}" />
         <div class="card-content">
           <p class="album-title">{{ album.title }}</p>
-          <p>{{ album.release_date | date: "EEE, MMM d, y" }}</p>
+          <p class="album-record-info">
+            <fa-icon [icon]="['fas', 'calendar-day']"></fa-icon>
+            <span>{{ album.release_date | date: "EEE, MMM d, y" }}</span>
+          </p>
+          <p class="album-record-info">
+            <fa-icon [icon]="['fas', 'record-vinyl']"></fa-icon>
+            <span>{{ album.record_type | titlecase }}</span>
+          </p>
         </div>
       </div>
     </div>
@@ -30,6 +40,9 @@
     <div class="artist-info">
       <img class="artist-image" src="{{ profile && profile.picture_big }}" alt="{{ profile && profile.name }}" />
       <div class="artist-name">{{ profile && profile.name }}</div>
+      <div class="artist-fan-count">
+        <fa-icon [icon]="['fas', 'record-vinyl']"></fa-icon> {{ profile && profile.nb_album | number }} Albums
+      </div>
       <div class="artist-fan-count">
         <fa-icon [icon]="['fas', 'users']"></fa-icon> {{ profile && profile.nb_fan | number }} Fans
       </div>
@@ -44,7 +57,14 @@
         <img class="card-image" src="{{ album.cover_big }}" alt="Photo of {{ album.title }}" />
         <div class="card-content">
           <p class="album-title">{{ album.title | ucwords }}</p>
-          <p>{{ album.release_date | date: "EEE, MMM d, y" }}</p>
+          <p class="album-record-info">
+            <fa-icon [icon]="['fas', 'calendar-day']"></fa-icon>
+            <span>{{ album.release_date | date: "EEE, MMM d, y" }}</span>
+          </p>
+          <p class="album-record-info">
+            <fa-icon [icon]="['fas', 'record-vinyl']"></fa-icon>
+            <span>{{ album.record_type | titlecase }}</span>
+          </p>
         </div>
       </div>
     </div>

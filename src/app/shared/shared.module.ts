@@ -20,6 +20,7 @@ import {
   faPlay,
   faPause,
   faDownload,
+  faCalendarDay,
 } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faArrowAltCircleRight } from '@fortawesome/free-regular-svg-icons';
@@ -111,7 +112,8 @@ export class SharedModule {
       faArrowAltCircleRight,
       faPlay,
       faPause,
-      faDownload
+      faDownload,
+      faCalendarDay
     );
   }
 }

@@ -23,14 +23,13 @@ export interface Track {
 }
 
 export interface Album {
+  id: number;
   title: string;
-  title_short: string;
-  preview: string;
-  duration: number;
-  explicit_lyrics: boolean;
-  durationString?: string;
+  fans?: number;
+  explicit_lyrics?: boolean;
   cover?: string;
   cover_big?: string;
   cover_medium?: string;
   release_date?: string;
+  record_type?: string;
 }

@@ -104,7 +104,7 @@
 }
 
 .card-item {
-  height: 320px;
+  height: fit-content;
   width: 240px;
   margin: 8px;
   padding: 0;
@@ -113,7 +113,6 @@
 
   @include respond-to(handhelds) {
     width: 45%;
-    height: fit-content;
   }
 }
 
@@ -159,11 +158,19 @@
 
 .album-title {
   line-height: 1.2em;
-  height: 2.4em;
+  height: 2.25em;
   overflow: hidden;
   text-overflow: ellipsis;
   width: 100%;
   font-weight: 600;
+}
+
+.album-record-info {
+  width: 100%;
+}
+
+.album-record-info .ng-fa-icon {
+  margin-right: 4px;
 }
 
 .artist-data {

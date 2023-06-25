@@ -86,6 +86,20 @@
   }
 }
 
-.artist-title, .fan-count{
+.artist-title,
+.fan-count {
   padding: 4px 8px;
+}
+
+.details-cont {
+  display: flex;
+  width: 100%;
+
+  @include respond-to(handhelds) {
+    flex-direction: column;
+  }
+}
+
+.details-cont p {
+  margin: 0;
 }

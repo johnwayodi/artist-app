@@ -6,7 +6,7 @@ import { format } from 'date-fns';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { map, shareReplay } from 'rxjs/operators';
 import { MusicService } from 'src/app/core/services/music.service';
-import { Artist, Track } from 'src/utils';
+import { Album, Artist, Track } from 'src/utils';
 
 @Component({
   selector: 'app-profile',
@@ -15,7 +15,7 @@ import { Artist, Track } from 'src/utils';
 })
 export class ProfileComponent implements OnInit {
   profile!: Artist;
-  albums: any[] = [];
+  albums: Album[] = [];
   topTracks: Track[] = [];
   artistId!: number;
   isLoading: boolean = false;
@@ -47,7 +47,6 @@ export class ProfileComponent implements OnInit {
       this.profile = res;
       this.getAlbums();
       this.getTopTracks();
-      window.scrollTo({ top: 0, left: 0 });
     });
   }
 
@@ -69,6 +68,7 @@ export class ProfileComponent implements OnInit {
         return track;
       });
       this.isLoading = false;
+      window.scrollTo({ top: 0, left: 0 });
     });
   }
 

@@ -10,7 +10,11 @@
         <p class="artist-title">
           {{ artist.name | ucwords }}
         </p>
-        <p class="fan-count"><fa-icon [icon]="['fas', 'users']"></fa-icon> {{ artist.nb_fan | number }} Fans</p>
+        <div class="details-cont">
+          <p class="fan-count"><fa-icon [icon]="['fas', 'record-vinyl']"></fa-icon> {{ artist.nb_album | number}} Albums
+          </p>
+          <p class="fan-count"><fa-icon [icon]="['fas', 'users']"></fa-icon> {{ artist.nb_fan | number }} Fans</p>
+        </div>
       </mat-card-content>
     </mat-card>
   </div>
