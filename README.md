@@ -1,4 +1,5 @@
 # <a href="https://artist-app-johnwayodi.vercel.app/" target="_blank">🔗 Artista</a>
+
 Get information about Artists
 
 Information fetched from the [Deezer API](https://developers.deezer.com/api)
@@ -6,11 +7,12 @@ Information fetched from the [Deezer API](https://developers.deezer.com/api)
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
 
 ## Screenshots
-![Screenshot 2023-06-20 at 10 25 19](https://github.com/johnwayodi/artist-app/assets/10683903/7838bd9f-523f-4812-9505-57a94d3a9846)
 
-![Screenshot 2023-06-20 at 10 27 58](https://github.com/johnwayodi/artist-app/assets/10683903/33e78595-75e6-40fa-8549-fd8e1e61f7c5)
+![Landing Page](https://github.com/johnwayodi/artist-app/assets/10683903/aba34162-aa27-4849-bd51-875c985d8d6d)
 
-![Screenshot 2023-06-20 at 10 26 11](https://github.com/johnwayodi/artist-app/assets/10683903/918f9790-27ff-4a7d-a0cd-be5e14adb37a)
+![Artist Profile](https://github.com/johnwayodi/artist-app/assets/10683903/b5a76cb4-eb86-4698-a47d-26db6c2ccc46)
+
+![Artist Album](https://github.com/johnwayodi/artist-app/assets/10683903/a1af3dcf-17e7-4ff4-83a4-517db104e53f)
 
 ## Development server
 
@@ -37,5 +39,3 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-
-

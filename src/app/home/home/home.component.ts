@@ -11,10 +11,10 @@ import { Artist } from 'src/utils';
 export class HomeComponent implements OnInit {
   artists: Artist[] = [];
   isLoading: boolean = false;
-  // randomLetter: string = String.fromCharCode(
-  //   97 + Math.floor(Math.random() * 26)
-  // );
-  randomLetter: string = 'col';
+  randomLetter: string = String.fromCharCode(
+    97 + Math.floor(Math.random() * 26)
+  );
+
   constructor(private musicService: MusicService, private router: Router) {}
 
   ngOnInit(): void {
